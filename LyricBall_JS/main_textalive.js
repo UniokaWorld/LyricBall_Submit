@@ -12,8 +12,6 @@ player.addListener({
 const playBtn = document.querySelector("#play");
 
 function SongSet(id, url) {
-  console.log(id);
-  console.log(url);
   if (id != 0) songLists[id]();
   else player.createFromSongUrl(url);
 }
@@ -23,12 +21,12 @@ let p = 0;
 let is_;
 let end = false;
 let i = 0;
-//毎フレーム呼ぶ
+
 function onTimeUpdate(position) {
   if (!player.video.firstChar) {
     return;
   }
-  //なぜか数回、positionして大きい値が渡されるための対処
+  //なぜか数回、positionとして大きい値が渡されるための対処
   if (i < 6) {
     i++;
     if (position > 600) {
@@ -68,7 +66,6 @@ function SendChoruses(position) {
   }
 }
 
-//loadが完了したら呼ばれる
 function onTimerReady() {
   p = player.getChoruses();
   gameInstance.SendMessage("JSLisnerOBJ", "SetSongName", player.data.song.name);
@@ -79,32 +76,6 @@ function onTimerReady() {
   );
   document.querySelector("#overlay").style.display = "block";
 }
-
-// function onTimerReady() {
-//   artistSpan.textContent = player.data.song.artist.name;
-//   songSpan.textContent = player.data.song.name;
-
-//   document.querySelectorAll("button").forEach((btn) => (btn.disabled = false));
-
-//   let p = player.video.firstPhrase;
-//   jumpBtn.disabled = !p;
-//   console.log(player.data.getChoruses());
-//   while (p && p.next) {
-//     p.animate = animatePhrase;
-//     p = p.next;
-//   }
-// }
-
-// function onThrottledTimeUpdate(position) {
-//   positionEl.textContent = String(Math.floor(position));
-// }
-
-// function animatePhrase(now, unit) {
-//   // show current phrase
-//   if (unit.contains(now)) {
-//     phraseEl.textContent = unit.text;
-//   }
-// }
 
 const songLists = {
   // king妃jack躍 / 宮守文学 feat. 初音ミク

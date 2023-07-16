@@ -65,16 +65,16 @@
 
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/LyricBall_JS.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/LyricBall_JS.data.unityweb",
-        frameworkUrl: buildUrl + "/LyricBall_JS.framework.js.unityweb",
-        codeUrl: buildUrl + "/LyricBall_JS.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Unioka",
-        productName: "SmartBall_Unity",
-        productVersion: "0.1",
-        showBanner: unityShowBanner,
-      };
+    var config = {
+      dataUrl: buildUrl + "/LyricBall_JS.data.unityweb",
+      frameworkUrl: buildUrl + "/LyricBall_JS.framework.js.unityweb",
+      codeUrl: buildUrl + "/LyricBall_JS.wasm.unityweb",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Unioka",
+      productName: "SmartBall_Unity",
+      productVersion: "0.1",
+      showBanner: unityShowBanner,
+    };
 
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -102,23 +102,17 @@
     } else {
       // Desktop style
       var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
+      var windowHeight = window.innerHeight;
+      var windowRatio = windowWidth / windowHeight;
+      var targetRatio = 16 / 9;
 
-        // ウィンドウの比率を計算する
-        var windowRatio = windowWidth / windowHeight;
-
-        // 16:9の比率を計算する
-        var targetRatio = 16 / 9;
-
-        if (windowRatio > targetRatio) {
-          // ウィンドウの横幅が16:9の比率よりも大きい場合、高さを基準に計算する
-          canvas.style.height = `${windowHeight}px`;
-          canvas.style.width = `${windowHeight * targetRatio}px`;
-        } else {
-          // ウィンドウの縦幅が16:9の比率よりも大きい場合、幅を基準に計算する
-          canvas.style.width = `${windowWidth}px`;
-          canvas.style.height = `${windowWidth / targetRatio}px`;
-        }
+      if (windowRatio > targetRatio) {
+        canvas.style.height = `${windowHeight}px`;
+        canvas.style.width = `${windowHeight * targetRatio}px`;
+      } else {
+        canvas.style.width = `${windowWidth}px`;
+        canvas.style.height = `${windowWidth / targetRatio}px`;
+      }
     }
 
     loadingBar.style.display = "block";
