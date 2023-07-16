@@ -5,7 +5,6 @@ Unity 2021.3.22f1でLyricBall_Unityフォルダを開き、WebGLでフォルダ�
 *UnityでのBuildデータは本リポジトリのReleasesにあります。  
 ビルド後に生成されたBuildフォルダを本リポジトリの"LyricBall_Unity"内に入れ、index.htmlを任意のweb serverでひらきます。  
 ## 作品について
-### 作品名
 [りりっくぼーる](https://t-unioka.pages.dev/)
 ![image](https://github.com/UniokaWorld/LyricBall_Submit/assets/52340378/ceb5ed48-c72b-4302-ac56-59846353b578)
 ## 作品のアピールポイント (フォーム回答と同じもの)
@@ -15,5 +14,5 @@ Unity 2021.3.22f1でLyricBall_Unityフォルダを開き、WebGLでフォルダ�
 最後に増減の玉数がでます。多くの玉数を楽しんでみてください。  
 また、曲に速さによって玉の短時間に打ち出される数も異なるので違った体験ができます。ぜひ、色々な曲で試してみてください。
 ## その他工夫した点
-玉の文字が見やすくなるように、打ち出された直後のミクさんより上にいるときのみ、文字が回転をしないようにしました。
+玉の文字が見やすくなるように、打ち出された直後のミクさんより上にいるときのみ、文字が回転をしないようにしました。  
 ![image](https://github.com/UniokaWorld/LyricBall_Submit/assets/52340378/f512589d-baf2-47c1-a100-2e030fd6a34b)
