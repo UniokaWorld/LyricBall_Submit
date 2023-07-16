@@ -1,8 +1,18 @@
 # LyricBall_Submit
-『初音ミク「マジカルミライ 2023」楽曲コンテスト』提出用リポジトリです。
-# 作品紹介
-
+『初音ミク「マジカルミライ 2023」楽曲コンテスト』提出用リポジトリです。  
 ## ビルド方法
-Unity 2021.3.22f1でLyricBall_Unityフォルダを開き、WebGLでフォルダー名を"LyricBall_Unity"でビルドします。
-*UnityでのBuildデータはReleasesにあります。
-ビルド後に生成されたBuildフォルダを本リポジトリの"LyricBall_Unity"内に入れ、index.htmlを任意のweb serverでひらきます。
+Unity 2021.3.22f1でLyricBall_Unityフォルダを開き、WebGLでフォルダー名を"LyricBall_Unity"でビルドします。  
+*UnityでのBuildデータは本リポジトリのReleasesにあります。  
+ビルド後に生成されたBuildフォルダを本リポジトリの"LyricBall_Unity"内に入れ、index.htmlを任意のweb serverでひらきます。  
+## 作品について
+[りりっくぼーる](https://t-unioka.pages.dev/)
+![image](https://github.com/UniokaWorld/LyricBall_Submit/assets/52340378/ceb5ed48-c72b-4302-ac56-59846353b578)
+## 作品のアピールポイント (フォーム回答と同じもの)
+歌詞の1文字を1つの玉にして、曲に合わせてスマートボールで楽しめる作品です。  
+玉は曲に合わせて自動で打ち出されます。右下のスライドバーを調整して玉の打ち出される強さを調整できます。  
+サビの部分ではミクさんの口が開きます。口の部分は1度に39玉をゲットできるため、積極的に狙っていきましょう。  
+最後に増減の玉数がでます。多くの玉数を楽しんでみてください。  
+また、曲に速さによって玉の短時間に打ち出される数も異なるので違った体験ができます。ぜひ、色々な曲で試してみてください。
+## その他工夫した点
+玉の文字が見やすくなるように、打ち出された直後のミクさんより上にいるときのみ、文字が回転をしないようにしました。  
+![image](https://github.com/UniokaWorld/LyricBall_Submit/assets/52340378/f512589d-baf2-47c1-a100-2e030fd6a34b)
